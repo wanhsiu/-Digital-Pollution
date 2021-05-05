@@ -88,7 +88,7 @@ async function loadCoords(lat, lon) {
 
 
 async function fetchData (lat, lon) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${openWeatherMapApiKey}`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${openWeatherMapApiKey}`);
     const responseBody = await response.json();
     return responseBody;
 };
