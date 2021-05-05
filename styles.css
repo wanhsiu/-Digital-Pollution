@@ -1,0 +1,183 @@
+
+html body { 
+    margin:0;
+    padding:0;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700s;
+
+}
+
+#user-form {
+    position:fixed;
+    margin: 25px 50px 75px;
+    z-index: 1000000;
+}
+
+.button {
+    background-color:#FFA500;
+    /* border: none; */
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    position:fixed;
+    margin-top:25px;
+    margin-left:100px;
+    font-size: 20px;
+    left:200px;
+    bottom:0;
+    margin-bottom: 20px;
+  }
+
+  .button2 {
+    background-color:#FFA500;
+    /* border: none; */
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    position:fixed;
+    margin-top:25px;
+    margin-left:100px;
+    font-size: 20px;
+    bottom:20;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+
+  .info-button {
+    margin-left:50px;
+  }
+
+  .key-button {
+    right:50px;
+  }
+
+  .place {
+    background-color:white;
+    /* border: none; */
+    color: black;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /* margin: 4px 2px; */
+    /* cursor: pointer; */
+    border-radius: 30px;
+    position:fixed;
+    margin-top:25px;
+    margin-right:50px;
+    bottom:0;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+  }
+
+  #info {
+    background-color: #FFA500;
+    /* border: none; */
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    /* cursor: pointer; */
+    border-radius: 16px;
+    position:fixed;
+    margin: 25px 40px ;
+    right:10px;
+    font-size: 20px;
+    bottom:0;
+    margin-bottom: 20px;
+    z-index: 0;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight:700;
+    
+  }
+
+  #overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+  .overlay-inner {
+    width: 700px;
+    height: 450px;
+    background-color: #a89f87;
+    margin: auto;
+    margin-top:90px;
+    padding:30px;
+  }
+
+  .key-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .key {
+    width: 25%;
+    margin-bottom: 30px;
+
+  }
+
+  .key-image {
+    text-align: center;
+    padding: 5px;
+
+  }
+
+  .key-key {
+    padding:10px;
+
+  }
+  
+  .key-key {
+    font-size: 15px;
+  }
+
+  .key-label, .key-key {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight:500;
+    font-size: 20px;
+
+  }
+
+  .heading {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight:500;
+    font-size: 50px;
+  }
+
+  .about {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight:500;
+    font-size: 25px;
+  }
+
+  hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    border-style: inset;
+    border: 0.5px solid black;
+}
