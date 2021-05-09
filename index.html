@@ -2,9 +2,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>DIGITAL POLLUTION</title>
-        <meta name="description" content="">
-        <!-- <meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;” /> -->
+        <title>(DIGITAL) POLLUTION</title>
+        <meta name="description" content="This website allows users to visualize the air quality in any location. The digital particles are formed by pulling data from the current air pollution API. Please refer to the key to reference what each graphic means.">
+        <meta name="author" content="Wanhsiu Wendie Lee">
+        <meta name="keywords" content="pollution reader, air quality, digital pollution">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css" type="text/css"> 
         <link rel="stylesheet" href="https://use.typekit.net/fhd4uxj.css">
@@ -14,15 +15,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#00aba9">
-        <meta name="theme-color" content="#ffffff">
-
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">   
         <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
@@ -32,76 +24,81 @@
     <body>   
         
         <form id="user-form">
-            <input type="text" name="address" placeholder="enter zipcode or city" class="place"/>
+            <input type="text" name="address" placeholder="ENTER CITY OR ZIP" class="place">
             <button type="submit" class="button">SUBMIT</button>
         </form>
 
-        <button id="info-btn" type="info" class="button2 info-button">INFO</button>
+            <button id="info-btn" type="info" class="button2 info-button">INFO</button>
+            <button id="key-btn" type="info" class="button2 key-button">KEY</button>
 
-        <button id="key-btn" type="info" class="button2 key-button">KEY</button>
-
+       
         <div id="overlay">
             <div class="overlay-inner">
                 <div id="overlay-info" style="display:none">
-                    <div class="heading">(DIGITAL) POLLUTION READER</div>
+                    <div class="heading">(Digital) Pollution</div>
                     <hr>
                     <p class="about">
-                        This website allows users to see the air quality in their current location. Users are able to input their information and see the different air particles. 
-                        Please refer to the key to see what each graphic means. I would suggest entering your current location and another location that is the opposite of where you are. Example: Bangkok, Thailand vs. Reykjavik, Iceland.</p>
+                        This website allows users to visualize the air quality in any location. The digital particles are formed
+                        by pulling data from the current air pollution API. Please refer to the key to reference what each graphic means.
+                    </p>
+                        
+                    <div id="aboutme"> Website by Wanhsiu (Wendie) Lee</div>
                 </div>
+            
+
                 <div id="overlay-key">
-                    <div class="overlay-heading"></div>
                     <div class="key-items">
                         <div class="key">
-                            <div class="key-label">co</div>
-                            <div class="key-image"><img src="images/particle_5_info.png"></div>
-                            <div class="key-key">Carbon Minoxide</div>
-                        </div>
-
-                        <div class="key">
-                            <div class="key-label">o3</div>
-                            <div class="key-image"><img src="images/particle_2_info.png"></div>
-                            <div class="key-key">Ozone</div>
-                        </div>
-
-                        <div class="key">
-                            <div class="key-label">no2</div>
-                            <div class="key-image"><img src="images/particle_1_info.png"></div>
-                            <div class="key-key">Nitrogen Dioxide</div>
-                        </div>
-                        <div class="key">
-                            <div class="key-label">so2</div>
-                            
-                            <div class="key-image"><img src="images/particle_3_info.png"></div>
-                            <div class="key-key">Sulphur Dioxide</div>
-                        </div>
-                        <div class="key">
-                            <div class="key-label">pm2_5</div>   
-                            <div class="key-image"><img src="images/particle_4_info.png"></div>
-                            <div class="key-key">Fine Particle Matter</div>
-                        </div>
-                        <div class="key">
-                            <div class="key-label">pm_10</div>
-                            
-                            <div class="key-image"><img src="images/particle_7_info.png"></div>
-                            <div class="key-key">Coarse Particulate Matter</div>
-                        </div>
-                        <div class="key">
-                            <div class="key-label">nh3</div>
-                            <div class="key-image"><img src="images/particle_6_info.png"></div>
-                            <div class="key-key">Ammonia</div>
-                        </div>
-
-                        <div class="key">
-                            <div class="key-label">no</div>              
-                            <div class="key-image"><img src="images/particle_8_info.png"></div>
-                            <div class="key-key">Nitrogen Minoxide</div>
-                        </div>
+                        <div class="key-label">co</div>
+                        <div class="key-image"><img src="images/particle_5_info.png"></div>
+                        <div class="key-key">Carbon Minoxide</div>
                     </div>
+
+                    <div class="key">
+                        <div class="key-label">o3</div>
+                        <div class="key-image"><img src="images/particle_2_info.png"></div>
+                         <div class="key-key">Ozone</div>
+                    </div>
+
+                    <div class="key">
+                        <div class="key-label">no2</div>
+                        <div class="key-image"><img src="images/particle_1_info.png"></div>
+                        <div class="key-key">Nitrogen Dioxide</div>
+                    </div>
+                        
+                    <div class="key">
+                        <div class="key-label">so2</div>
+                        <div class="key-image"><img src="images/particle_3_info.png"></div>
+                        <div class="key-key">Sulphur Dioxide</div>
+                    </div>
+                    
+                    <div class="key">
+                        <div class="key-label">pm2_5</div>   
+                        <div class="key-image"><img src="images/particle_4_info.png"></div>
+                        <div class="key-key">Fine Particle Matter</div>
+                    </div>
+                    
+                    <div class="key">
+                        <div class="key-label">nh3</div>
+                        <div class="key-image"><img src="images/particle_6_info.png"></div>
+                        <div class="key-key">Ammonia</div>
+                        </div>
+
+                    <div class="key">
+                        <div class="key-label">no</div>              
+                        <div class="key-image"><img src="images/particle_8_info.png"></div>
+                        <div class="key-key">Nitrogen Minoxide</div>
+                    </div>
+
+                    <div class="key">
+                        <div class="key-label">pm_10</div>
+                        <div class="key-image"><img src="images/particle_7_info.png"></div>
+                        <div class="key-key">Coarse Particulate Matter</div>
+                    </div>
+
                 </div>
             </div>
         </div>
-
 
 </body>
 </html>

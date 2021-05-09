@@ -4,8 +4,12 @@ html body {
     padding:0;
     font-family: 'Darker Grotesque', sans-serif;
     font-weight: 700s;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
 
 }
+/* BOTTOM BUTTONS */
 
 #user-form {
     position:fixed;
@@ -15,94 +19,67 @@ html body {
 
 .button {
     background-color:#FFA500;
-    /* border: none; */
     color: black;
     padding: 10px 20px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
     cursor: pointer;
     border-radius: 30px;
     position:fixed;
-    margin-top:25px;
-    margin-left:100px;
-    font-size: 20px;
+    font-size: 30px;
     left:200px;
     bottom:0;
-    margin-bottom: 20px;
-  }
-
-  .button2 {
-    background-color:#FFA500;
-    /* border: none; */
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 30px;
-    position:fixed;
-    margin-top:25px;
-    margin-left:100px;
-    font-size: 20px;
-    bottom:20;
-    margin-bottom: 20px;
-    z-index: 2;
-  }
-
-  .info-button {
-    margin-left:50px;
-  }
-
-  .key-button {
-    right:50px;
+    margin: 25px 0px 20px 200px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight:700;
   }
 
   .place {
     background-color:white;
-    /* border: none; */
     color: black;
     padding: 10px 10px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    /* margin: 4px 2px; */
-    /* cursor: pointer; */
-    border-radius: 30px;
+    border-radius: 50px;
     position:fixed;
-    margin-top:25px;
-    margin-right:50px;
+    margin: 25px 50px 20px 0px; 
     bottom:0;
-    margin-bottom: 20px;
-    font-size: 20px;
-
+    font-size: 30px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight:700;
   }
 
-  #info {
+/*INFO AND KEY BUTTON*/
+
+.button2 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight:700;
+    font-size: 30px;
     background-color: #FFA500;
-    /* border: none; */
     color: black;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
-    /* cursor: pointer; */
-    border-radius: 16px;
-    position:fixed;
-    margin: 25px 40px ;
-    right:10px;
-    font-size: 20px;
-    bottom:0;
-    margin-bottom: 20px;
-    z-index: 0;
-    font-family: 'Darker Grotesque', sans-serif;
-    font-weight:700;
-    
-  }
+    cursor: pointer;
+    border-radius: 35px;
+    position: fixed;
+    font-size: 30px;
+    bottom: 20;
+    margin: 25px 0px 20px 100px;
+    z-index: 2;
+}
+
+.info-button {
+  margin-left:50px;
+}
+
+.key-button {
+  right:50px;
+}
+
+
+
+/* OVERLAY SPECS */
 
   #overlay {
     position: fixed; /* Sit on top of the page content */
@@ -116,68 +93,307 @@ html body {
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
+    overflow: scroll;
   }
 
   .overlay-inner {
-    width: 700px;
-    height: 450px;
+    width: 850px;
+    height: 500px;
     background-color: #a89f87;
     margin: auto;
-    margin-top:90px;
+    margin-top:100px;
     padding:30px;
   }
+
+
+/* INFO*/
+
+.about, #aboutme {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-weight:500;
+  font-size: 25px;
+}
+
+#aboutme {
+  margin-top: 270px;
+}
+
+
+hr {
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  border-style: inset;
+  border: 0.5px solid black;
+}
+
+
+.heading {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-weight:500;
+  font-size: 50px;
+}
+
+/* KEY */
+
+.key-label, .key-key {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-weight:500;
+  font-size: 20px;
+}
 
   .key-items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left:10px;
   }
 
   .key {
     width: 25%;
     margin-bottom: 30px;
-
+    margin-top:10px;
   }
 
   .key-image {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 
   }
 
   .key-key {
     padding:10px;
-
   }
   
-  .key-key {
-    font-size: 15px;
+
+
+  @media screen and (max-width: 1000px) 
+   
+  {
+    .key-button {
+      right:200px;
+    }
+    
+    .button, .place {
+      bottom:50px;
+    }
+
+    .overlay-inner {
+      width: 500px;
+      height: 400px;
+      background-color: #a89f87;
+      margin: auto;
+      margin-top:100px;
+      padding:10px;
+    }
+    
+    .about, #aboutme {
+      font-family: 'Darker Grotesque', sans-serif;
+      font-weight:500;
+      font-size: 18px;
+    }
+    
+    #aboutme {
+      margin-top: 150px;
+    }
+
+    
   }
 
-  .key-label, .key-key {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-weight:500;
-    font-size: 20px;
 
+  @media screen and (max-width: 500px) 
+  
+  {
+
+    .button2 {
+      font-size: 15px;
+      font-style: normal;
+      margin-right:10px;
+      margin-bottom:10px;
+      margin-top:5px;
+      border-radius: 25px;
+    }
+
+    .info-button {
+      margin-left:10px;
+    }
+    
+    .key-button {
+      right: auto;
+    }
+    
+  
+    .overlay-inner {
+      width: 375px;
+      height: 400px;
+      background-color: #a89f87;
+      margin: auto;
+      margin-top:90px;
+      padding:10px;
+    }
+
+    .about, #aboutme {
+      font-family: 'Darker Grotesque', sans-serif;
+      font-weight:500;
+      font-size: 18px;
+    }
+    
+    #aboutme {
+      margin-top: 150px;
+    }
+
+    .heading {
+      font-family: 'Darker Grotesque', sans-serif;
+      font-weight:500;
+      font-size: 30px;
+    }
+
+    #user-form {
+      margin: 0;
+    }
+
+    .place {
+      text-align: center;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 15px;
+      font-family: 'Darker Grotesque', sans-serif;
+      font-weight:700;
+      width:120px;
+      margin-top: 60px;
+      margin-left: 10px;
+      padding: 15px 15px 15px 15px;
+      bottom: auto;
+    }
+
+    .button {
+      font-family: 'Darker Grotesque', sans-serif;      
+      font-weight: 700;
+      font-size: 15px;
+      font-style: normal;
+      border-radius: 25px;
+      margin: 0px 10px 10px 5px;
+      padding: 15px 15px 15px 15px;
+      text-align: center;
+      bottom:auto;
+      top:60px;
+
+    }
+  }
+   
+
+@media screen and (max-width: 375px) 
+  
+  {
+
+  .overlay-inner {
+    width: 100vw;
+    height: auto;
+    background-color: #a89f87;
+    margin: auto;
+    margin-top:100px;
+    padding:10px;
+    margin-left:0px;
+    overflow:scroll;
   }
 
-  .heading {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-weight:500;
-    font-size: 50px;
+
+    .button2 {
+      font-size: 15px;
+      font-style: normal;
+      margin-right:10px;
+      margin-bottom:10px;
+      margin-top:5px;
+      border-radius: 25px;
+    }
+
+    .info-button {
+      margin-left:10px;
+    }
+    
+    .key-button {
+      right: auto;
+    }
+    
+
+    .about, #aboutme {
+      font-family: 'Darker Grotesque', sans-serif;
+      font-weight:500;
+      font-size: 18px;
+    }
+    
+    #aboutme {
+      margin-top: 150px;
+    }
+
+    .heading {
+      font-family: 'Darker Grotesque', sans-serif;
+      font-weight:500;
+      font-size: 30px;
+    }
+
+    #user-form {
+      margin: 0;
+    }
+
+    .place {
+      text-align: center;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 15px;
+      font-family: 'Darker Grotesque', sans-serif;
+      font-weight:700;
+      width:120px;
+      margin-top: 60px;
+      margin-left: 10px;
+      padding: 15px 15px 15px 15px;
+      bottom: auto;
+    }
+
+    .button {
+      font-family: 'Darker Grotesque', sans-serif;      
+      font-weight: 700;
+      font-size: 15px;
+      font-style: normal;
+      border-radius: 25px;
+      margin: 0px 10px 10px 5px;
+      padding: 15px 15px 15px 15px;
+      text-align: center;
+      bottom:auto;
+      top:60px;
+
+    }
+
+    .key {
+      width: 100vw;
+      margin-bottom: 30px;
+      margin-top:10px;
+    }
+
+    .key-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left:0px;
+      margin-bottom:50px;
+    }
+
+    #overlay {
+      position: fixed; /* Sit on top of the page content */
+      display: none; /* Hidden by default */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 50px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      cursor: pointer; /* Add a pointer on hover */
+      overflow: scroll;
+    }
+  
   }
 
-  .about {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-weight:500;
-    font-size: 25px;
-  }
-
-  hr {
-    display: block;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    border-style: inset;
-    border: 0.5px solid black;
-}
